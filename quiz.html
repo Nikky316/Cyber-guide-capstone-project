@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz — Cyber Safety Awareness</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><h1>Impact Making Women</h1></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="quiz.html" class="active">Quiz</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" onclick="toggleMobileNav()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container quiz-section">
+      <h2>Are you Cyber Smart?</h2>
+      <p>Answer the short quiz. You'll get an immediate score and tips.</p>
+
+      <form id="quizForm" class="quiz-form" onsubmit="return false;">
+        <!-- Question 1 -->
+        <fieldset>
+          <legend>1. What should you do if you receive an email saying "Click here to claim your prize"?</legend>
+          <label><input type="radio" name="q1" value="A"> Click quickly</label>
+          <label><input type="radio" name="q1" value="B"> Ignore it</label>
+          <label><input type="radio" name="q1" value="C"> Share with friends</label>
+          <label><input type="radio" name="q1" value="D"> Reply and ask for more info</label>
+        </fieldset>
+
+        <!-- Question 2 -->
+        <fieldset>
+          <legend>2. Which is the strongest password?</legend>
+          <label><input type="radio" name="q2" value="A"> 123456</label>
+          <label><input type="radio" name="q2" value="B"> MyName2020</label>
+          <label><input type="radio" name="q2" value="C"> LetMeIn</label>
+          <label><input type="radio" name="q2" value="D"> K3m!@2024</label>
+        </fieldset>
+
+        <!-- Question 3 -->
+        <fieldset>
+          <legend>3. What is 2FA (Two-Factor Authentication)?</legend>
+          <label><input type="radio" name="q3" value="A"> A game cheat</label>
+          <label><input type="radio" name="q3" value="B"> A second lock for your account</label>
+          <label><input type="radio" name="q3" value="C"> A type of password</label>
+          <label><input type="radio" name="q3" value="D"> A bank code</label>
+        </fieldset>
+
+        <!-- Question 4 -->
+        <fieldset>
+          <legend>4. Which practice is safest on public Wi-Fi?</legend>
+          <label><input type="radio" name="q4" value="A"> Log into your bank</label>
+          <label><input type="radio" name="q4" value="B"> Use VPN and avoid sensitive logins</label>
+          <label><input type="radio" name="q4" value="C"> Share passwords with nearby people</label>
+          <label><input type="radio" name="q4" value="D"> Leave hotspot open</label>
+        </fieldset>
+
+        <!-- Question 5 -->
+        <fieldset>
+            <legend>5. What should you do if you receive a suspicious email asking for personal information?</legend>
+            <label><input type="radio" name="q4" value="A"> Reply to the email and provide the requested information</label>
+            <label><input type="radio" name="q4" value="B"> Forward it to your friends to ask if it’s safe</label>
+            <label><input type="radio" name="q4" value="C"> Click the link to check if it’s real</label>
+            <label><input type="radio" name="q4" value="D"> You should not click on any links or attachments and instead delete the email or report it</label>
+          </fieldset>
+
+        <div class="quiz-actions">
+          <button class="btn primary" id="submitQuizBtn" type="button" onclick="gradeQuiz()">Submit</button>
+          <button class="btn outline" type="button" onclick="resetQuiz()">Reset</button>
+        </div>
+      </form>
+
+      <div id="quizResult" class="quiz-result" hidden>
+        <h3>Your Score: <span id="scoreText"></span></h3>
+        <p id="scoreMsg"></p>
+        <div id="tipsArea"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h4>Impact Making Women</h4><p>Educating communities to bridge the digital safety gap.</p></div>
+    </div>
+    <div class="container copyright">
+        <small>© 2025 Impact Making Women • Built by Nike Nsikak-Nelson • All rights reserved.</small>
+      </div>
+  </footer>
+</body>
+</html>
